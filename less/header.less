@@ -2,8 +2,86 @@
   height: 100px;
   background-color: @white;
   padding: 0 25px;
+  position: relative;
+
+  .login-form {
+    //display: none;
+    &__header {
+      display: block;
+      width: 100%;
+      padding: 10px 25px;
+      a {
+        padding-top: 3px;
+        border-top: 1px solid @overline-color-main;
+        &:hover {
+          border-top: 1px solid @overline-color-active;
+        }
+        &:first-child {float: left;}
+        &:last-child {float: right;}
+      }
+    }
+    width: 250px;
+    height: 260px;
+    background-color: @white;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    .btn {
+      display: block;
+      width: 200px;
+      height: 35px;
+      background-color: #561C51;
+      color: @white;
+      margin: 0 auto;
+    }
+    input {
+      width: 200px;
+      height: 35px;
+      margin: 30px auto;
+    }
+  }
+  .navbar-default {
+    background-color: @white;
+    border-color: @white;
+    .nav {
+
+      padding-top: 40px;
+      > li {
+        > a {
+          font-size: 16px;
+          position: relative;
+          &:hover, &:focus, &:active {
+            &:after {
+              position: absolute;
+              bottom: -20px;
+              content: "";
+              left: 45%;
+              width: 20px;
+              height: 20px;
+              transform: rotate(45deg);
+              background: @white;
+            }
+            span {
+              border-top: 1px solid @overline-color-active;
+            }
+          }
+          span {
+            padding-top: 3px;
+            border-top: 1px solid @overline-color-main;
+          }
+        }
+
+      }
+    }
+  }
   .navbar-toggle {
     float: left;
+    .toggle[aria-toggle=true] {
+      transform: rotate(90deg);
+      background-color: @pink;
+    }
     .icon-bar {
       background-color: @gray;
       width: 45px;
@@ -14,48 +92,19 @@
         background-color: @pink;
       }
     }
-    &:active,
+
+    /*&:active,
     &.active {
       transform: rotate(90deg);
       background-color: @pink;
-    }
+    }*/
   }
   /*button.active {
     transform: rotate(90deg);
   }*/
-  &-nav {
-
-    padding-top: 40px;
-    > li {
-      > a {
-        color: @gray;
-        font-size: 16px;
-        position: relative;
-        &:hover, &:focus, &:active {
-          color: @link-color-active;
-          background-color: transparent;
-          span {
-            border-top: 1px solid @overline-color-active;
-          }
-        }
-        span {
-          padding-top: 3px;
-          border-top: 1px solid @overline-color-main;
-        }
-      }
-    }
-  }
-
   @media (max-width: 1200px) {
 
   }
   @media (max-width: 767px) {
-    a {
-      .navbar-brand {
-        float: none;
-        display: inline-block;
-        margin: 0 auto;
-      }
-    }
   }
 }
