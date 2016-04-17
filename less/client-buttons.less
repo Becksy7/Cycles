@@ -1,0 +1,76 @@
+.button {
+  width: 220px;
+  height: 60px;
+  padding: 0;
+  border-radius: 0;
+  background-color: @btn-base-bg;
+  border-color: #b66b97;
+  font-family: @base-font-family;
+  color: @white;
+  font-size: 20px;
+  line-height: 60px;
+  vertical-align: middle;
+  &:hover,
+  &:focus,
+  &.focus {
+    color: @white;
+    border-color:#d49dc4;
+    background-color: @btn-hover-bg;
+  }
+  &:active,
+  &.active {
+    color: #cdaca8;
+    border-color: #66001a;
+    background-color: @btn-base-bg;
+  }
+  &.disabled,
+  &[disabled] {
+    color: #b2b2b2;
+    background-color: @btn-disabled-bg;
+    border-color: #e5e5e5;
+  }
+
+  &--medium {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+  }
+   &--small {
+    width: 65px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 13px;
+  }
+  @media (max-width: 767px){
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    height: 100px;
+    line-height: 100px;
+    font-size: 35px;
+  }
+  &-promo {
+    display: block;
+    margin: 35px auto;
+    width: 658px;
+    height: 100px;
+    line-height: 100px;
+    background-color: @white;
+    border-color: @btn-promo-base-color;
+    border-radius: 15px;
+    color: @btn-promo-base-color;
+    font-size: 60px;
+    font-weight: 100;
+    &:hover {
+      background-color: @btn-promo-base-color;
+      color: @white;
+    }
+    @media (max-width: 767px){
+      width: 90%;
+      height: 150px;
+      line-height: 150px;
+      font-size: 60px;
+    }
+  }
+}
