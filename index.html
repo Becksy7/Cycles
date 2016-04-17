@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ROCK-CYCLE</title>
+    <link rel="stylesheet" href="vendor/slick/slick.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 <body>
@@ -64,8 +65,43 @@
 
 
     <main>
-        <section></section>
-        <div class="slider">hkfhbnm.</div>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="slider" data-main-slick data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "swipeToSlide": true}'>
+                <div class="slider-i gradient gradient-violet" style="background-image: url(images/slides/slide1.jpg)">
+                    <div class="jumbotron">
+                        <header>
+                            <div class="h1">Тренировка</div>
+                            <div class="h2">в <a href="#">новом формате</a></div>
+                        </header>
+                        <div class="pics hidden-xs">
+                            <a href="#"><i class="icon icon-brain"></i></a>
+                            <a href="#"><i class="icon icon-brain"></i></a>
+                            <a href="#"><i class="icon icon-brain"></i></a>
+                            <a href="#"><i class="icon icon-brain"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-i gradient gradient-bordeau" style="background-image: url(images/slides/slide2.jpg)">
+                    <div class="jumbotron">
+                        <header>
+                            <div class="h1">Тренировка</div>
+                            <div class="h2">в <a href="#">новом формате</a></div>
+                        </header>
+                    </div>
+                </div>
+                <div class="slider-i gradient gradient-violet" style="background-image: url(images/slides/slide1.jpg)">
+                    <div class="jumbotron">
+                        <header>
+                            <div class="h1">Тренировка</div>
+                            <div class="h2">в <a href="#">новом формате</a></div>
+                        </header>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
         <div class="container">
@@ -84,5 +120,7 @@
 </div>
 <script src="js/jquery-1.12.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
