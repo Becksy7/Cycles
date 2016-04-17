@@ -1,8 +1,6 @@
 .button {
   width: 220px;
   height: 60px;
-  padding: 0;
-  border-radius: 0;
   background-color: @btn-base-bg;
   border-color: #b66b97;
   font-family: @base-font-family;
@@ -14,7 +12,7 @@
   &:focus,
   &.focus {
     color: @white;
-    border-color:#d49dc4;
+    border-color: #d49dc4;
     background-color: @btn-hover-bg;
   }
   &:active,
@@ -36,13 +34,13 @@
     line-height: 30px;
     font-size: 15px;
   }
-   &--small {
+  &--small {
     width: 65px;
     height: 25px;
     line-height: 25px;
     font-size: 13px;
   }
-  @media (max-width: 767px){
+  @media (max-width: 767px) {
     display: block;
     margin: 10px auto;
     width: 90%;
@@ -66,11 +64,30 @@
       background-color: @btn-promo-base-color;
       color: @white;
     }
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       width: 90%;
       height: 150px;
       line-height: 150px;
       font-size: 60px;
     }
   }
+}
+
+.btn {
+  font-family: @base-font-family;
+  font-size: 20px;
+  font-weight: 300;
+}
+.btn-primary {
+  .button-variant(@btn-promo-base-color, @white, @btn-promo-base-color);
+}
+
+.btn-lg {
+  font-size: 60px;
+  font-weight: 100;
+  .button-variant(@btn-promo-base-color, @white, @btn-promo-base-color);
+}
+
+.btn-rounded {
+  border-radius: 15px;
 }

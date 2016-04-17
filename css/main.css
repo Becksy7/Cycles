@@ -7664,7 +7664,6 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .header {
-  height: 100px;
   background-color: #ffffff;
   padding: 0 25px;
   position: relative;
@@ -7776,8 +7775,6 @@ fieldset[disabled] .btn-danger.active {
 .button {
   width: 220px;
   height: 60px;
-  padding: 0;
-  border-radius: 0;
   background-color: #81004a;
   border-color: #b66b97;
   font-family: 'Roboto', sans-serif;
@@ -7852,10 +7849,162 @@ fieldset[disabled] .btn-danger.active {
     font-size: 60px;
   }
 }
+.btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+.btn-primary {
+  color: #cf91c0;
+  background-color: #ffffff;
+  border-color: #cf91c0;
+}
+.btn-primary:focus,
+.btn-primary.focus {
+  color: #cf91c0;
+  background-color: #e6e6e6;
+  border-color: #9c4487;
+}
+.btn-primary:hover {
+  color: #cf91c0;
+  background-color: #e6e6e6;
+  border-color: #bc66a8;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #cf91c0;
+  background-color: #e6e6e6;
+  border-color: #bc66a8;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+  color: #cf91c0;
+  background-color: #d4d4d4;
+  border-color: #9c4487;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus {
+  background-color: #ffffff;
+  border-color: #cf91c0;
+}
+.btn-primary .badge {
+  color: #ffffff;
+  background-color: #cf91c0;
+}
+.btn-lg,
+.btn-group-lg > .btn {
+  font-size: 60px;
+  font-weight: 100;
+  color: #cf91c0;
+  background-color: #ffffff;
+  border-color: #cf91c0;
+}
+.btn-lg:focus,
+.btn-lg.focus {
+  color: #cf91c0;
+  background-color: #e6e6e6;
+  border-color: #9c4487;
+}
+.btn-lg:hover {
+  color: #cf91c0;
+  background-color: #e6e6e6;
+  border-color: #bc66a8;
+}
+.btn-lg:active,
+.btn-lg.active,
+.open > .dropdown-toggle.btn-lg {
+  color: #cf91c0;
+  background-color: #e6e6e6;
+  border-color: #bc66a8;
+}
+.btn-lg:active:hover,
+.btn-lg.active:hover,
+.open > .dropdown-toggle.btn-lg:hover,
+.btn-lg:active:focus,
+.btn-lg.active:focus,
+.open > .dropdown-toggle.btn-lg:focus,
+.btn-lg:active.focus,
+.btn-lg.active.focus,
+.open > .dropdown-toggle.btn-lg.focus {
+  color: #cf91c0;
+  background-color: #d4d4d4;
+  border-color: #9c4487;
+}
+.btn-lg:active,
+.btn-lg.active,
+.open > .dropdown-toggle.btn-lg {
+  background-image: none;
+}
+.btn-lg.disabled:hover,
+.btn-lg[disabled]:hover,
+fieldset[disabled] .btn-lg:hover,
+.btn-lg.disabled:focus,
+.btn-lg[disabled]:focus,
+fieldset[disabled] .btn-lg:focus,
+.btn-lg.disabled.focus,
+.btn-lg[disabled].focus,
+fieldset[disabled] .btn-lg.focus {
+  background-color: #ffffff;
+  border-color: #cf91c0;
+}
+.btn-lg .badge {
+  color: #ffffff;
+  background-color: #cf91c0;
+}
+.btn-rounded {
+  border-radius: 15px;
+}
 .footer {
   background-color: #ffffff;
   height: 140px;
   text-align: center;
+}
+.footer .navbar {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .footer .navbar {
+    text-align: left;
+  }
+}
+.footer .navbar ul {
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .footer .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .footer .navbar-nav > li {
+    float: left;
+  }
+  .footer .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.jumbotron {
+  background: transparent;
 }
 .copyright {
   display: block;
@@ -7864,10 +8013,8 @@ fieldset[disabled] .btn-danger.active {
   margin: 20px auto 50px;
   color: #808080;
 }
-@media (max-width: 767px) {
+@media (767px) {
   .copyright {
-    text-align: left;
-    padding-left: 5%;
     font-size: 30px;
   }
 }
@@ -8212,7 +8359,4 @@ fieldset[disabled] .btn-danger.active {
 }
 .slick-slider .slick-slide:focus {
   outline: 0;
-}
-.jumbotron {
-  background: transparent;
 }
