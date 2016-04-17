@@ -1,0 +1,126 @@
+.slider{
+    overflow: hidden;
+    height: 560px;
+    @media (max-width: @screen-xs-max) {
+        height: 420px;
+    }
+    &-i{
+        height: 560px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        .background-size(cover);
+        overflow: hidden;
+        .transition(.5s transform ease);
+        &.shifted-left{
+            .transform(translateX(70px));
+            z-index: 1;
+        }
+        &.shifted-right{
+            .transform(translateX(-70px));
+            z-index: 1;
+        }
+        &.slick-active{
+            .transition(none);
+            .transform(none);
+        }
+        @media (max-width: @screen-xs-max) {
+            height: 420px;
+        }
+        header{
+            width: 520px;
+            height: 520px;
+            overflow: hidden;
+            .border-radius(50%);
+            border: 1px solid fade(@white,34%);
+            padding: 50px 70px 100px;
+            display: table-cell;
+            vertical-align: middle;
+            @media (max-width: @screen-xs-max) {
+                border: 0;
+                height: 420px;
+                vertical-align: bottom;
+                padding: 0 0 60px;
+                .border-radius(0);
+            }
+            a {
+                color: @yellow;
+                text-decoration: none;
+                border-bottom: 1px solid @yellow;
+            }
+        }
+        .jumbotron{
+            padding: 0 90px;
+            margin: 0 -15px;
+            position: relative;
+            bottom: -200px;
+            @media (max-width: @screen-xs-max) {
+                bottom: 0;
+            }
+        }
+    }
+    .slick-arrow{
+        font-size: 0;
+        .icon;
+        color: @white;
+        background: @transparent;
+        border: 0;
+        .opacity(.5);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        padding: 0 10px;
+        display: table-cell;
+        vertical-align: middle;
+        z-index: 100;
+
+        &:before{
+            font-size: 50px;
+        }
+        &:hover{
+            .opacity(.9);
+        }
+        &.slick-prev{
+            .icon-arrow-left;
+            left: 0;
+        }
+        &.slick-next{
+            .icon-arrow-right;
+            right: 0;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+}
+.jumbotron{
+    h1, .h1{
+        font-size: 60px;
+        font-family: @base-font-family;
+        font-weight: 300;
+        color: @white;
+        margin: 0;
+    }
+    h2, .h2{
+        font-size: 46px;
+        font-family: @base-font-family;
+        font-weight: 100;
+        color: @white;
+        margin: 0;
+    }
+}
+.pics{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    padding-top: 30px;
+    >a {
+        display: inline-block;
+        font-size: 44px;
+        margin: 0 0 0 28px;
+        color: @white;
+        .opacity(.59);
+        &:hover{
+            .opacity(.9);
+        }
+    }
+}
