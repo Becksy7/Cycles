@@ -32,4 +32,60 @@ $(function(){
 		var $prevSlide = $currentSlide.next();
 		$prevSlide.removeClass('shifted-right');
 	});
+
+	//feedbacks slider
+
+
+
+
+	var feedbackSlick = function(slick){
+		var $slick = $(slick);
+		var id = $slick.attr('id');
+		var $navs = $('[data-slick-logos-for='+id+']');
+		$slick.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			swipeToSlide: true,
+			asNavFor: $navs,
+			arrows: false,
+			responsive: [
+				//{
+				//	breakpoint: 99999,
+				//	settings: "unslick"
+				//},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+		$navs.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			asNavFor: $slick,
+			arrows: false,
+			responsive: [
+				//{
+				//	breakpoint: 99999,
+				//	settings: "unslick"
+				//},
+				{
+					breakpoint: 767,
+					settings: {
+						centerMode: true,
+						focusOnSelect: true,
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+	}
+	$('[data-slick-feedbacks]').each(function(i, slick) {
+		feedbackSlick(slick);
+	});
+
 });

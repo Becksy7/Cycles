@@ -1,4 +1,9 @@
 .slider{
+    overflow: hidden;
+    height: 560px;
+    @media (max-width: @screen-xs-max) {
+        height: 420px;
+    }
     &-i{
         height: 560px;
         background-repeat: no-repeat;
@@ -15,7 +20,8 @@
             z-index: 1;
         }
         &.slick-active{
-            .transition(0);
+            .transition(none);
+            .transform(none);
         }
         @media (max-width: @screen-xs-max) {
             height: 420px;
