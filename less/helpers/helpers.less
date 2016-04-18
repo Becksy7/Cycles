@@ -157,12 +157,12 @@
        -moz-background-clip : padding;
             background-clip : padding-box;
 }
-.placeholder (@rules) {
+/*.placeholder (@rules) {
     &::-webkit-input-placeholder { @rules(); }
          &:-ms-input-placeholder { @rules(); }
              &::-moz-placeholder { @rules(); }/* Firefox 19+ */
-              &:-moz-placeholder { @rules(); }/* Firefox 18- */
-}
+             /* &:-moz-placeholder { @rules(); }/* Firefox 18- */
+//}
 .opacity(@opacity: 0.5) {
     -webkit-opacity : @opacity;
        -moz-opacity : @opacity;
@@ -311,11 +311,11 @@
         cursor: -webkit-grabbing;
     }
 }
-.keyframes(@name; @arguments) {
+/*.keyframes(@name; @arguments) {
     @-moz-keyframes @name { @arguments(); }
     @-webkit-keyframes @name { @arguments(); }
     @keyframes @name { @arguments(); }
-}
+}*/
 .flip-horizontal(){
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);

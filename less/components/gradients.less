@@ -13,10 +13,20 @@
         &:before{
             .vertical-gradient(@transparent, @violet);
         }
+        &_convert {
+            &:before{
+                .vertical-gradient (@violet, @transparent);
+            }
+        }
     }
     &-bordeau{
         &:before{
             .vertical-gradient(@transparent, @bordeau);
+        }
+    }
+    &-maroon {
+        &:before{
+            .vertical-gradient(@maroon, @transparent);
         }
     }
 }

@@ -1,0 +1,56 @@
+.no-margin > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.mod-bunner {
+  height: 330px;
+  text-align: left;
+  background-size: cover;
+  padding: 40px 55px;
+  &_caption {
+    position: relative;
+    z-index: 10000;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 47.2px;
+    color: @white;
+    padding-bottom: 3px;
+    border-bottom: 1px solid @overline-color-main;
+    @media (max-width: @screen-xs-max) {
+      font-size: 48px;
+      line-height: 57.6px;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      color: @pink;
+      border-bottom: 1px solid @overline-color-active;
+      text-decoration: none;
+    }
+  }
+    &_text {
+      margin-top: 10px;
+      position: relative;
+      z-index: 10000;
+      font-size: 17px;
+      font-weight: 100;
+      line-height: 27px;
+      color: @white;
+      @media (max-width: @screen-xs-max) {
+        font-size: 30px;
+        line-height: 52px;
+      }
+    }
+    &_mb1 {
+      background: url("../images/bunner-bg3.jpg") no-repeat 100% 0;
+
+    }
+    &_mb2 {
+      background: url("../images/bunner-bg1.jpg") no-repeat 100% 0;
+
+    }
+    &_mb3 {
+      background: url("../images/bunner-bg2.jpg") no-repeat 100% 0;
+    }
+  }
